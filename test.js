@@ -61,7 +61,7 @@ gsap.utils.toArray('.progress').forEach(progress => {
 
 // Typed.js animation for name
 new Typed('#typed', {
-  strings: ['Aman Sharma', 'Engineer', 'Developer', 'Innovator'],
+  strings: ['Praful Patil', 'Engineer', 'Developer', 'Innovator'],
   typeSpeed: 50,
   backSpeed: 50,
   loop: true
