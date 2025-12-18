@@ -1,111 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praful Patil | Senior Embedded Firmware Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="test1.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praful Patil | Embedded Firmware Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="test1.css" />
 </head>
+
 <body>
+  <!-- Cursor Elements -->
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
 
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
-      <div class="logo">Praful<span>.</span>P</div>
+      <div class="logo">Praful Patil</div>
       <ul class="nav-links">
         <li><a href="#home" data-scroll>Home</a></li>
+        <li><a href="#about" data-scroll>About</a></li>
         <li><a href="#experience" data-scroll>Experience</a></li>
         <li><a href="#projects" data-scroll>Projects</a></li>
         <li><a href="#skills" data-scroll>Skills</a></li>
         <li><a href="#contact" data-scroll>Contact</a></li>
       </ul>
       <div class="burger">
-        <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
     </div>
   </nav>
 
+  <!-- Header Section -->
   <header id="home">
     <div id="particles-js"></div>
     <div class="header-content">
       <h1 class="animated-text"><span id="typed"></span></h1>
-      <p class="tagline">Senior Firmware Engineer • 5+ Years Industrial Expertise • IoT Architect</p>
+      <p class="tagline">Senior Embedded Firmware Engineer • IoT & Wireless Systems</p>
       <div class="header-cta">
-        <a href="assets/Praful_Patil_Resume.pdf" class="btn" target="_blank"><i class="fas fa-file-download"></i> Download Resume</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="#about" class="btn">Discover More</a>
+        <a href="assets/Praful_Patil_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Resume</a>
       </div>
     </div>
   </header>
 
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>About Me</h2>
+      </div>
+      <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+        <div class="about-text">
+          <p>
+            Hello! I am <strong>Praful Patil</strong>, a <strong>Senior Embedded Firmware Engineer</strong> with 5+ years of experience in designing, developing, and optimizing firmware for IoT and wireless systems at <strong>AAROH LABS PRIVATE LTD</strong>.
+          </p>
+          <p>
+            My work spans <strong>BLE Mesh, LoRa, LoRaWAN, MQTT, Zigbee, and Raspberry Pi</strong>–based systems, with a strong focus on <strong>low-power design, sensor integration, and production-ready embedded solutions</strong>.
+          </p>
+          <ul class="about-list">
+            <li><strong>Current Role:</strong> Senior Engineer, Embedded Firmware</li>
+            <li><strong>Experience:</strong> 5+ years (2020 – Present)</li>
+            <li><strong>Education:</strong> B.Tech in Electronics and Telecommunication</li>
+            <li><strong>Diploma:</strong> Dr. JJ Magdum Polytechnic, Jaysingpur</li>
+            <li><strong>Class 12th (MCVC):</strong> Sangli Highschool, Sangli</li>
+          </ul>
+          <a href="assets/Praful_Patil_Resume.pdf" class="btn" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <div class="about-image parallax" data-speed="0.1">
+          <img src="assets/profile.jpg" alt="Praful Patil" class="profile-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
   <section id="experience">
     <div class="container">
       <div class="section-title" data-aos="fade-up">
-        <h2>Career Progression</h2>
+        <h2>Experience</h2>
       </div>
-      <div class="timeline">
-        
-        <div class="timeline-item" data-aos="fade-right">
-          <div class="timeline-content highlight">
-            <span class="year-tag">2024 - Present</span>
-            <h3>Senior Engineer</h3>
-            <span class="company">AAROH LABS PRIVATE LTD.</span>
-            <p>Leading the firmware architecture for next-gen IoT safety systems. Responsible for end-to-end product delivery, mentoring junior engineers, and optimizing system-wide power budgets.</p>
+      <div class="timeline" data-aos="fade-up" data-aos-delay="100">
+        <!-- 2025 - Present -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-microchip"></i>
           </div>
-        </div>
-
-        <div class="timeline-item" data-aos="fade-left">
           <div class="timeline-content">
-            <span class="year-tag">2022 - 2024</span>
-            <h3>Engineer - 2</h3>
-            <span class="company">AAROH LABS PRIVATE LTD.</span>
-            <p>Focused on specialized wireless stacks (LoRaWAN & BLE Mesh). Successfully integrated OTA (Over-the-Air) update systems and complex sensor fusion algorithms.</p>
+            <h3>AAROH LABS PRIVATE LTD.</h3>
+            <span>Senior Engineer – Embedded Firmware | Pune, India | 2024 - Present</span>
+            <p>
+              Leading development of production-grade firmware for IoT devices using <strong>BLE Mesh, LoRa, LoRaWAN, and MQTT</strong> on ARM Cortex-M and other MCUs. 
+            </p>
+            <p>
+              Architecting and optimizing <strong>low-power modes</strong>, sleep–wake strategies, and power profiles to achieve long battery life for field-deployed devices.
+            </p>
+            <p>
+              Integrating complex <strong>sensor interfaces</strong> (I2C, SPI, UART, ADC, GPIO) and ensuring robust communication, FOTA/OTA support, and field diagnostics.
+            </p>
           </div>
         </div>
 
-        <div class="timeline-item" data-aos="fade-right">
+        <!-- 2023 - 2024 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-satellite-dish"></i>
+          </div>
           <div class="timeline-content">
-            <span class="year-tag">2020 - 2022</span>
-            <h3>Engineer - 1</h3>
-            <span class="company">AAROH LABS PRIVATE LTD.</span>
-            <p>Bare-metal programming for ARM Cortex-M microcontrollers. Developed fundamental drivers for I2C, SPI, and UART interfaces and basic peripheral management.</p>
+            <h3>AAROH LABS PRIVATE LTD.</h3>
+            <span>Engineer 2 – Embedded Firmware | Pune, India | 2023 - 2024</span>
+            <p>
+              Developed and maintained <strong>LoRaWAN end devices and gateways</strong>, including work on a custom <strong>LoRa Network Server (LNS)</strong> stack and integration with cloud platforms.
+            </p>
+            <p>
+              Implemented <strong>BLE Mesh–based smart smoke detectors</strong> and LoRa-based sensing nodes for building and industrial applications with secure OTA update mechanisms.
+            </p>
+            <p>
+              Collaborated with cross-functional hardware and software teams to bring prototypes to stable, field-ready products with strong focus on reliability and maintainability.
+            </p>
           </div>
         </div>
 
+        <!-- 2022 - 2023 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>AAROH LABS PRIVATE LTD.</h3>
+            <span>Engineer 1 – Embedded Firmware | Pune, India | 2022 - 2023</span>
+            <p>
+              Worked on <strong>embedded C/C++ firmware</strong> for ARM Cortex-M, ESP8266, and EFR32BG22 platforms using RTOS and bare-metal architectures.
+            </p>
+            <p>
+              Implemented <strong>sensor drivers</strong>, communication stacks, and bootloaders, and contributed to <strong>power optimization, debugging, and board bring-up</strong>.
+            </p>
+            <p>
+              Used tools such as <strong>Simplicity Studio, Keil, GCC, JTAG/SWD, oscilloscopes, and logic analyzers</strong> to debug complex issues in the lab and field.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2020 - 2022 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>AAROH LABS PRIVATE LTD.</h3>
+            <span>Junior Engineer – Embedded | Pune, India | 2020 - 2022</span>
+            <p>
+              Started career working on <strong>firmware bring-up, basic drivers, and test utilities</strong> for embedded boards and sensors.
+            </p>
+            <p>
+              Gained hands-on experience in <strong>wireless communication basics</strong>, board testing, and integrating firmware with backend APIs and MQTT brokers.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <div class="container">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Featured Projects</h2>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card" data-aos="zoom-in">
-                <div class="project-info">
-                    <span class="badge">LoRaWAN</span>
-                    <h3>Smart Smoke Detector (LoRa)</h3>
-                    <p>Designed a safety-critical smoke detector with 10km range and 5-year battery life using SX1276 and ultra-low power firmware techniques.</p>
-                </div>
+      <div class="section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <!-- Project Item 1 -->
+        <div class="project-item">
+          <div class="project-image" style="background-image: url('project1.jpg');">
+            <div class="project-overlay">
+              <h3>Smart Smoke Detector (BLE Mesh)</h3>
+              <p>
+                Firmware for BLE Mesh–based smoke detector nodes with group control, status reporting, and OTA support for building safety systems.
+              </p>
+              <a href="#contact" class="btn">Discuss Project</a>
             </div>
-            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="project-info">
-                    <span class="badge">BLE MESH</span>
-                    <h3>Industrial Mesh Network</h3>
-                    <p>Large scale (200+ nodes) lighting and smoke detection network using Silicon Labs EFR32 chips with sub-second alert latency.</p>
-                </div>
-            </div>
+          </div>
         </div>
+        <!-- Project Item 2 -->
+        <div class="project-item">
+          <div class="project-image" style="background-image: url('project2.jpg');">
+            <div class="project-overlay">
+              <h3>Smart Smoke Detector (LoRa / LoRaWAN)</h3>
+              <p>
+                Long-range LoRa/LoRaWAN node for smoke detection with low-power operation, periodic telemetry, and integration with custom LNS.
+              </p>
+              <a href="#contact" class="btn">Discuss Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Item 3 (Example) -->
+        <div class="project-item">
+          <div class="project-image" style="background-image: url('project3.jpg');">
+            <div class="project-overlay">
+              <h3>Raspberry Pi IoT Gateway</h3>
+              <p>
+                Raspberry Pi–based IoT gateway aggregating LoRa/ BLE sensor data, pushing to cloud via MQTT/REST with monitoring dashboards.
+              </p>
+              <a href="#contact" class="btn">Discuss Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-content" data-aos="fade-up" data-aos-delay="100">
+        <!-- Core Firmware -->
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Embedded C / C++</h3>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="90"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Embedded Systems & RTOS</h3>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="90"></div>
+          </div>
+        </div>
+
+        <!-- Wireless & IoT -->
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Wireless Protocols (BLE Mesh, LoRa, LoRaWAN, Zigbee)</h3>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="90"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>MQTT, IoT Architectures & LNS</h3>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="85"></div>
+          </div>
+        </div>
+
+        <!-- Hardware & Low Power -->
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Low-Power Design & Power Modes</h3>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="90"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Sensor Integration (I2C, SPI, UART, ADC)</h3>
+            <span>88%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="88"></div>
+          </div>
+        </div>
+
+        <!-- Platforms & Tools -->
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>ARM Cortex-M, ESP8266, EFR32, Raspberry Pi</h3>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Debugging (JTAG/SWD, Logic Analyzer, Oscilloscope)</h3>
+            <span>88%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="88"></div>
+          </div>
+        </div>
+
+        <!-- Software & Collaboration -->
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Python & Scripting</h3>
+            <span>80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="80"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-info">
+            <h3>Git, CI/CD, Docker for Embedded</h3>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" data-percentage="85"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Contact Me</h2>
+      </div>
+      <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> prafulp1008@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91 7620091008</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/praful-patil-69138b147/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Pallyapd" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Praful Patil. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" title="Go to top">↑</button>
+
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
   <script src="test.js"></script>
 </body>
+
 </html>
