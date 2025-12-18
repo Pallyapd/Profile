@@ -8,6 +8,7 @@ AOS.init({
 const cursor = document.querySelector('.cursor');
 const cursorFollower = document.querySelector('.cursor-follower');
 document.addEventListener('mousemove', (e) => {
+  if (!cursor || !cursorFollower) return;
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
   cursorFollower.style.left = `${e.clientX}px`;
@@ -17,6 +18,7 @@ document.addEventListener('mousemove', (e) => {
 // Navbar Background Change on Scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
   if (window.pageYOffset > 50) {
     navbar.classList.add('scrolled');
   } else {
@@ -27,86 +29,96 @@ window.addEventListener('scroll', () => {
 // Burger Menu Toggle
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
-burger.addEventListener('click', () => {
-  navLinks.classList.toggle('nav-active');
-  burger.classList.toggle('toggle');
-});
+if (burger && navLinks) {
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+  });
+}
 
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[data-scroll]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    navLinks.classList.remove('nav-active');
-    burger.classList.remove('toggle');
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    if (navLinks && burger) {
+      navLinks.classList.remove('nav-active');
+      burger.classList.remove('toggle');
+    }
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
 // GSAP Animations for Skills Progress Bars
-gsap.utils.toArray('.progress').forEach(progress => {
-  gsap.fromTo(progress, {
-    width: '0%',
-  }, {
-    width: progress.getAttribute('data-percentage') + '%',
-    scrollTrigger: {
-      trigger: progress,
-      start: 'top 80%',
-    },
-    duration: 2,
-    ease: 'power2.out',
+if (gsap && ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray('.progress').forEach(progress => {
+    gsap.fromTo(
+      progress,
+      { width: '0%' },
+      {
+        width: progress.getAttribute('data-percentage') + '%',
+        scrollTrigger: {
+          trigger: progress,
+          start: 'top 80%',
+        },
+        duration: 2,
+        ease: 'power2.out',
+      }
+    );
   });
-});
+}
 
 // Typed.js animation for name
 new Typed('#typed', {
-  strings: ['Praful Patil', 'Engineer', 'Developer', 'Innovator'],
+  strings: [
+    'Praful Patil',
+    'Senior Embedded Firmware Engineer',
+    'IoT & Wireless Developer',
+    'Low-Power Systems Engineer'
+  ],
   typeSpeed: 50,
-  backSpeed: 50,
+  backSpeed: 40,
+  backDelay: 1500,
   loop: true
 });
 
 // Particles.js Initialization
 particlesJS('particles-js', {
-  "particles": {
-    "number": {
-      "value": 80
+  particles: {
+    number: { value: 80 },
+    color: { value: '#00FFFF' },
+    shape: { type: 'circle' },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: '#00FFFF',
+      opacity: 0.4,
+      width: 1
     },
-    "color": {
-      "value": "#00FFFF"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.5
-    },
-    "size": {
-      "value": 3
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#00FFFF",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 3
+    move: {
+      enable: true,
+      speed: 3
     }
   }
 });
 
 // Contact Form Submission Handling
 const form = document.getElementById('contact-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  // Implement form submission logic (e.g., using Fetch API or AJAX)
-  alert('Thank you for your message!');
-  form.reset();
-});
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Implement real submission logic here (email service / backend)
+    alert('Thank you for your message!');
+    form.reset();
+  });
+}
 
 // Parallax effect
 window.addEventListener('scroll', () => {
@@ -114,32 +126,35 @@ window.addEventListener('scroll', () => {
   let scrollPosition = window.pageYOffset;
 
   parallax.forEach(element => {
-    let speed = element.dataset.speed;
+    const speed = parseFloat(element.dataset.speed) || 0.1;
     element.style.transform = `translateY(${scrollPosition * speed}px)`;
   });
 });
 
 // Tilt effect on project cards
-VanillaTilt.init(document.querySelectorAll(".project-item"), {
+VanillaTilt.init(document.querySelectorAll('.project-item'), {
   max: 25,
   speed: 400,
   glare: true,
-  "max-glare": 0.5,
+  'max-glare': 0.5,
 });
 
 // Scroll to top button
-const scrollToTopButton = document.getElementById("scrollToTop");
+const scrollToTopButton = document.getElementById('scrollToTop');
 
-window.onscroll = function() {scrollFunction()};
+window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
+  if (!scrollToTopButton) return;
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopButton.style.display = "block";
+    scrollToTopButton.style.display = 'block';
   } else {
-    scrollToTopButton.style.display = "none";
+    scrollToTopButton.style.display = 'none';
   }
 }
 
-scrollToTopButton.addEventListener("click", function(){
-  window.scrollTo({top: 0, behavior: 'smooth'});
-});
+if (scrollToTopButton) {
+  scrollToTopButton.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
